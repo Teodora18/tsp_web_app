@@ -263,7 +263,6 @@ function dijkstra(startKey, avoidKeys = new Set()) {
     dist[node] = Infinity;
     unvisitedNodes.add(node);
   }
-
   // If startKey is in avoidKeys, return empty path to avoid freeze
   if (!dist.hasOwnProperty(startKey)) return { dist: {}, prev: {} };
 
