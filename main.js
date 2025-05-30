@@ -52,7 +52,7 @@ const baseLayerGroup = new LayerGroup({
 
 const druzhbaBorder = new VectorLayer({
   source: new VectorSource({
-    url: "./data/druzhba_1_borders.geojson",
+    url: "./public/data/druzhba_1_borders.geojson",
     format: new GeoJSON(),
   }),
   style: new Style({
@@ -78,10 +78,10 @@ const pedestrianNetwork = new VectorLayer({
 const pedestrianNetworksData = {};
 
 Promise.all([
-  fetch("./data/pedestrian_network_druzhba1_densified1.geojson").then((res) =>
-    res.json(),
+  fetch("./public/data/pedestrian_network_druzhba1_densified1.geojson").then(
+    (res) => res.json(),
   ),
-  fetch("./data/pedestrian_network_druzhba1_densified_osm.geojson").then(
+  fetch("./public/data/pedestrian_network_druzhba1_densified_osm.geojson").then(
     (res) => res.json(),
   ),
 ]).then(([data1, data2]) => {
@@ -1552,7 +1552,7 @@ pointLayer.setStyle((feature) => {
           stroke: new Stroke({ color: "#fff", width: 1 }),
         })
       : new Icon({
-          src: "./icons/pin.png",
+          src: "./public/icons/pin.png",
           scale: 0.012,
         }),
     text: routeOrder
