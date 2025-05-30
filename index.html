@@ -39,101 +39,6 @@
                   style="cursor: pointer"
                 ></i>
               </h6>
-              <div class="form-check">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="poiLayer"
-                  disabled
-                  checked
-                />
-                <label class="form-check-label" for="poiLayer"
-                  >Точки на интерес</label
-                >
-              </div>
-              <div class="gap-1">
-                <span title="Отвори атрибутивна таблица.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="points-openAttributesBtn"
-                    disabled
-                  >
-                    <i class="bi bi-table"></i></button
-                ></span>
-                <span title="Активирай на селекция по картата.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="points-toggleSelectBtn"
-                    disabled
-                  >
-                    Селекция по картата
-                  </button></span
-                >
-                <span title="Редактирай геометрията на избрания обект.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="points-modifyGeometryBtn"
-                    disabled
-                  >
-                    <i class="bi bi-pencil-square"></i></button
-                ></span>
-                <span title="Изтегли точките на интерес.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="exportPOIBtn"
-                    disabled
-                  >
-                    <i class="bi bi-box-arrow-down"></i></button
-                ></span>
-              </div>
-
-              <div class="form-check mt-3">
-                <input
-                  class="form-check-input"
-                  type="checkbox"
-                  id="routeLayer"
-                  disabled
-                  checked
-                />
-                <label class="form-check-label" for="routeLayer"
-                  >Изчислен маршрут</label
-                >
-              </div>
-              <div class="gap-1">
-                <span title="Отвори атрибутивна таблица.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="route-openAttributesBtn"
-                    disabled
-                  >
-                    <i class="bi bi-table"></i></button
-                ></span>
-                <span title="Активирай на селекция по картата.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="route-toggleSelectBtn"
-                    disabled
-                  >
-                    Селекция по картата
-                  </button></span
-                >
-                <span title="Редактирай геометрията на избрания обект.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="route-modifyGeometryBtn"
-                    disabled
-                  >
-                    <i class="bi bi-pencil-square"></i></button
-                ></span>
-                <span title="Изтегли изчисления маршрут.">
-                  <button
-                    class="btn btn-outline-success btn-sm"
-                    id="exportRouteBtn"
-                    disabled
-                  >
-                    <i class="bi bi-box-arrow-down"></i></button
-                ></span>
-              </div>
               <label class="form-label mt-3" for="networkSelect"
                 >Изберете пешеходна мрежа за маршрутизация:</label
               >
@@ -169,6 +74,101 @@
               >
                 Пресметни маршрут
               </button>
+            </div>
+            <div class="form-check mt-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="poiLayer"
+                disabled
+                checked
+              />
+              <label class="form-check-label" for="poiLayer"
+                >Точки на интерес</label
+              >
+            </div>
+            <div class="gap-1">
+              <span title="Отвори атрибутивна таблица.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="points-openAttributesBtn"
+                  disabled
+                >
+                  <i class="bi bi-table"></i></button
+              ></span>
+              <span title="Активирай на селекция по картата.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="points-toggleSelectBtn"
+                  disabled
+                >
+                  Селекция по картата
+                </button></span
+              >
+              <span title="Редактирай геометрията на избрания обект.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="points-modifyGeometryBtn"
+                  disabled
+                >
+                  <i class="bi bi-pencil-square"></i></button
+              ></span>
+              <span title="Изтегли точките на интерес.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="exportPOIBtn"
+                  disabled
+                >
+                  <i class="bi bi-box-arrow-down"></i></button
+              ></span>
+            </div>
+
+            <div class="form-check mt-3">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="routeLayer"
+                disabled
+                checked
+              />
+              <label class="form-check-label" for="routeLayer"
+                >Изчислен маршрут</label
+              >
+            </div>
+            <div class="gap-1">
+              <span title="Отвори атрибутивна таблица.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="route-openAttributesBtn"
+                  disabled
+                >
+                  <i class="bi bi-table"></i></button
+              ></span>
+              <span title="Активирай на селекция по картата.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="route-toggleSelectBtn"
+                  disabled
+                >
+                  Селекция по картата
+                </button></span
+              >
+              <span title="Редактирай геометрията на избрания обект.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="route-modifyGeometryBtn"
+                  disabled
+                >
+                  <i class="bi bi-pencil-square"></i></button
+              ></span>
+              <span title="Изтегли изчисления маршрут.">
+                <button
+                  class="btn btn-outline-success btn-sm"
+                  id="exportRouteBtn"
+                  disabled
+                >
+                  <i class="bi bi-box-arrow-down"></i></button
+              ></span>
             </div>
 
             <hr class="my-3" />
