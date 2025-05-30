@@ -42,7 +42,7 @@ jobs:
         run: npm run build
 
       - name: Copy Data
-        run: cp data dist
+        run: -r cp data dist
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
