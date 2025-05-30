@@ -368,6 +368,7 @@ function drawRoute(coords) {
   if (routeLayer) {
     map.removeLayer(routeLayer);
   }
+
   // Calculate total distance
   const distance = coords.reduce((sum, curr, i, arr) => {
     if (i === 0) return 0;
