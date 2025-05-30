@@ -1,0 +1,535 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      media="screen"
+      href="data:text/css;base64,Ym9keSB7CiAgcGFkZGluZzogMDsKICBtYXJnaW46IDA7CiAgaGVpZ2h0OiAxMDAlOwp9CgojbWFwIHsKICB3aWR0aDogMTAwJTsKICBoZWlnaHQ6IDk0dmg7CiAgZGlzcGxheTogYmxvY2s7Cn0KCiNwZWRlc3RyaWFuLWF0dHJpYnV0ZU1vZGFsLAojZHJ1emhiYS1hdHRyaWJ1dGVNb2RhbCwKI3BvaW50cy1hdHRyaWJ1dGVNb2RhbCwKI3JvdXRlLWF0dHJpYnV0ZU1vZGFsIHsKICBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7CiAgcG9zaXRpb246IGZpeGVkOwogIHRvcDogMjAlOwogIGxlZnQ6IDIwJTsKICB3aWR0aDogNjAlOwogIGhlaWdodDogNjAlOwogIGJhY2tncm91bmQ6IHdoaXRlOwogIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7CiAgei1pbmRleDogMTAwMDsKICBkaXNwbGF5OiBmbGV4OwogIGZsZXgtZGlyZWN0aW9uOiBjb2x1bW47CiAgYm94LXNoYWRvdzogMCAwIDEwcHggcmdiYSgwLCAwLCAwLCAwLjMpOwogIG92ZXJmbG93OiBoaWRkZW47Cn0KCi5tb2RhbC1oZWFkZXIgewogIGZvbnQtZmFtaWx5OiBBcmlhbCwgc2Fucy1zZXJpZjsKICBmb250LXNpemU6IDEzcHg7CiAgYmFja2dyb3VuZDogI2YxZjFmMTsKICBwYWRkaW5nOiA4cHg7CiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7CiAgZGlzcGxheTogZmxleDsKICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47CiAgYWxpZ24taXRlbXM6IGNlbnRlcjsKICBmbGV4LXNocmluazogMDsKfQoKLm1vZGFsLXRhYmxlLXdyYXBwZXIgewogIG1heC1oZWlnaHQ6IGNhbGMoNTd2aCAtIDYwcHgpOwogIG92ZXJmbG93LXk6IGF1dG87CiAgb3ZlcmZsb3cteDogYXV0bzsKICBwYWRkaW5nOiAxMHB4Owp9CgojcGVkZXN0cmlhbi1hdHRyaWJ1dGVUYWJsZSwKI2RydXpoYmEtYXR0cmlidXRlVGFibGUsCiNwb2ludHMtYXR0cmlidXRlVGFibGUsCiNyb3V0ZS1hdHRyaWJ1dGVUYWJsZSB7CiAgd2lkdGg6IDEwMCU7CiAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTsKICB0YWJsZS1sYXlvdXQ6IGZpeGVkOwp9CgojcGVkZXN0cmlhbi1hdHRyaWJ1dGVUYWJsZSB0aGVhZCB0aCwKI2RydXpoYmEtYXR0cmlidXRlVGFibGUgdGhlYWQgdGgsCiNwb2ludHMtYXR0cmlidXRlVGFibGUgdGhlYWQgdGgsCiNyb3V0ZS1hdHRyaWJ1dGVUYWJsZSB0aGVhZCB0aCB7CiAgcG9zaXRpb246IHN0aWNreTsKICB0b3A6IDA7CiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZjsgLyogb3IgbWF0Y2ggeW91ciB0aGVtZSAqLwogIHotaW5kZXg6IDI7CiAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkICNjY2M7CiAgcGFkZGluZzogOHB4OwogIHRleHQtYWxpZ246IGxlZnQ7Cn0KCiNwZWRlc3RyaWFuLWF0dHJpYnV0ZVRhYmxlIHRoLAojcGVkZXN0cmlhbi1hdHRyaWJ1dGVUYWJsZSB0ZCwKI2RydXpoYmEtYXR0cmlidXRlVGFibGUgdGgsCiNkcnV6aGJhLWF0dHJpYnV0ZVRhYmxlIHRkLAojcG9pbnRzLWF0dHJpYnV0ZVRhYmxlIHRoLAojcG9pbnRzLWF0dHJpYnV0ZVRhYmxlIHRkLAojcm91dGUtYXR0cmlidXRlVGFibGUgdGgsCiNyb3V0ZS1hdHRyaWJ1dGVUYWJsZSB0ZCB7CiAgcGFkZGluZzogNHB4OwogIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7CiAgd29yZC1icmVhazogYnJlYWstd29yZDsKICBtYXgtd2lkdGg6IDIwMHB4Owp9CgojcGVkZXN0cmlhbi1hdHRyaWJ1dGVGaWx0ZXJzIHRoLAojZHJ1emhiYS1hdHRyaWJ1dGVGaWx0ZXJzIHRoLAojcG9pbnRzLWF0dHJpYnV0ZUZpbHRlcnMgdGgsCiNyb3V0ZS1hdHRyaWJ1dGVGaWx0ZXJzIHRoIHsKICBwb3NpdGlvbjogc3RpY2t5OwogIHRvcDogMzVweDsgLyogYWRqdXN0IGJhc2VkIG9uIGhlYWRlciBoZWlnaHQgKi8KICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjlmOWY5OwogIHotaW5kZXg6IDE7Cn0KCi5zZWxlY3RlZC1yb3cgewogIGJhY2tncm91bmQtY29sb3I6ICNmZmUzYTE7Cn0KCi5lZGl0aW5nLXJvdyB0ZCB7CiAgYmFja2dyb3VuZC1jb2xvcjogI2ZmZmJlNjsgLyogbGlnaHQgeWVsbG93ICovCiAgYm9yZGVyOiAxcHggc29saWQgI2YwYzM2ZDsKfQoKLmZlYXR1cmUtd2FybmluZyB7CiAgY29sb3I6IG9yYW5nZTsKICBmb250LXdlaWdodDogYm9sZDsKICBmb250LXNpemU6IHNtYWxsOwogIGRpc3BsYXk6IG5vbmU7CiAgbWFyZ2luLWJvdHRvbTogMTBweDsKfQoKI2F0dHJpYnV0ZUlucHV0TW9kYWwgewogIGRpc3BsYXk6IG5vbmU7CiAgcG9zaXRpb246IGFic29sdXRlOwogIHRvcDogMjAlOwogIGxlZnQ6IDMwJTsKICBiYWNrZ3JvdW5kOiB3aGl0ZTsKICBwYWRkaW5nOiAxMHB4OwogIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7CiAgei1pbmRleDogOTk5Owp9"
+    />
+    <script type="module" crossorigin src="/assets/index-Dd9FTmps.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-B6jkw37l.css" />
+  </head>
+  <body>
+    <div class="container-fluid p-0">
+      <!-- Header -->
+      <header class="row g-0">
+        <div
+          class="col-12 bg-success text-white px-1 py-2 border-bottom border-3 border-light"
+        >
+          <h2 class="m-0 fs-5">
+            Проблемът на пътуващия търговец – Дружба 1, София
+          </h2>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <div class="row g-0">
+        <!-- Sidebar -->
+        <aside class="col-md-3 p-3 bg-light overflow-auto" style="height: 94vh">
+          <section class="mb-4">
+            <h5 class="mb-3">Легенда</h5>
+
+            <div class="mb-3">
+              <h6 class="fw-bold">Маршрутизация</h6>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="poiLayer"
+                  disabled
+                  checked
+                />
+                <label class="form-check-label" for="poiLayer"
+                  >Точки на интерес</label
+                >
+              </div>
+              <div class="gap-1">
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="points-openAttributesBtn"
+                  disabled
+                >
+                  Атрибути: POI
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="points-toggleSelectBtn"
+                  disabled
+                >
+                  Enable Map Selection
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="points-modifyGeometryBtn"
+                  disabled
+                >
+                  Modify Geometry
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="exportPOIBtn"
+                  title="Изтегли точките на интерес."
+                  disabled
+                >
+                  📥
+                </button>
+              </div>
+
+              <div class="form-check mt-3">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="routeLayer"
+                  disabled
+                  checked
+                />
+                <label class="form-check-label" for="routeLayer"
+                  >Изчислен маршрут</label
+                >
+              </div>
+              <div class="gap-1">
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="route-openAttributesBtn"
+                  disabled
+                >
+                  Атрибути: POI
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="route-toggleSelectBtn"
+                  disabled
+                >
+                  Enable Map Selection
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="route-modifyGeometryBtn"
+                  disabled
+                >
+                  Modify Geometry
+                </button>
+                <button
+                  class="btn btn-outline-secondary btn-sm"
+                  id="exportRouteBtn"
+                  title="Изтегли изчисления маршрут."
+                  disabled
+                >
+                  📥
+                </button>
+              </div>
+
+              <label class="form-label mt-3" for="networkSelect"
+                >Изберете пешеходна мрежа за маршрутизация:</label
+              >
+              <select class="form-select form-select-sm" id="networkSelect">
+                <option value="network1" selected>
+                  Мрежа 1 - СофияПлан (основна)
+                </option>
+                <option value="network2">
+                  Мрежа 2 - OpenStreetMap (алтернативна)
+                </option>
+              </select>
+            </div>
+
+            <div class="btn-group btn-group-sm w-100" role="group">
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                onclick="resetApp()"
+              >
+                Нулирай
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                onclick="undoLastPoint()"
+              >
+                Отмени последната точка
+              </button>
+              <button
+                type="button"
+                class="btn btn-outline-primary"
+                onclick="calculateTSP()"
+              >
+                Пресметни маршрут
+              </button>
+            </div>
+
+            <hr class="my-3" />
+
+            <h6 class="fw-bold">Слоеве</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="pedestrianNetwork"
+                data-layer-index="1"
+              />
+              <label class="form-check-label" for="pedestrianNetwork"
+                >Пешеходна мрежа</label
+              >
+            </div>
+            <div class="mb-2">
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="pedestrian-openAttributesBtn"
+                title="Отвори атрибутивна таблица"
+              >
+                📋
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="pedestrian-toggleSelectBtn"
+              >
+                Enable Map Selection
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="pedestrian-modifyGeometryBtn"
+                disabled
+              >
+                Modify Geometry
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="pedestrian-toggleDrawBtn"
+              >
+                🆕
+              </button>
+            </div>
+
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="druzhbaBorder"
+                data-layer-index="0"
+                checked
+              />
+              <label class="form-check-label" for="druzhbaBorder"
+                >Граници на ж.к. Дружба 1</label
+              >
+            </div>
+            <div class="gap-1">
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="druzhba-openAttributesBtn"
+              >
+                Атрибути: Дружба
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="druzhba-toggleSelectBtn"
+              >
+                Enable Map Selection
+              </button>
+              <button
+                class="btn btn-outline-secondary btn-sm"
+                id="druzhba-modifyGeometryBtn"
+                disabled
+              >
+                Modify Geometry
+              </button>
+            </div>
+
+            <hr class="my-3" />
+            <h6 class="fw-bold">Базова карта</h6>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="osm"
+                name="baselayerbutton"
+                value="OSM"
+                checked
+              />
+              <label class="form-check-label" for="osm">OpenStreetMap</label>
+            </div>
+          </section>
+        </aside>
+
+        <!-- Map Section -->
+        <main class="col-md-9" style="height: 94vh">
+          <div id="map"></div>
+        </main>
+        >
+      </div>
+    </div>
+    <div id="pedestrian-attributeModal" style="display: none">
+      <div class="modal-header">
+        <h5>Атрибутивна таблица: Пешеходна мрежа</h5>
+        <div>
+          <button
+            id="pedestrian-toggleEditBtn"
+            title="Редактирай атрибутивна информация."
+          >
+            ✏️
+          </button>
+          <button
+            id="pedestrian-saveChangesBtn"
+            disabled
+            title="Запази промените."
+          >
+            💾
+          </button>
+          <button
+            id="pedestrian-undoChangesBtn"
+            disabled
+            title="Отмени всички незапазени промени."
+          >
+            ↩️
+          </button>
+          <button
+            id="pedestrian-deleteFeatureBtn"
+            disabled
+            title="Изтрий избрания обект."
+          >
+            🗑️
+          </button>
+          <button
+            id="pedestrian-downloadGeoJSONBtn"
+            onclick="downloadEditedGeoJSON()"
+            disabled
+            title="Изтегли редактирания GeoJSON файл."
+          >
+            ⬇️
+          </button>
+          <button
+            id="pedestrian-clearSelectionBtn"
+            disabled
+            title="Изчисти селекцията."
+          >
+            Изчисти селекция
+          </button>
+          <button
+            onclick="document.getElementById('pedestrian-attributeModal').style.display='none'"
+            title="Затвори атрибутивната таблица."
+          >
+            ❌
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-table-wrapper">
+        <table id="pedestrian-attributeTable">
+          <thead>
+            <tr id="pedestrian-attributeHeader"></tr>
+            <tr id="pedestrian-attributeFilters"></tr>
+          </thead>
+          <tbody></tbody>
+          <div id="pedestrian-selectedFeatureWarning" class="feature-warning">
+            В момента има избран обект.
+          </div>
+        </table>
+      </div>
+    </div>
+    <div id="attributeInputModal">
+      <h3>Add Feature Attributes</h3>
+      <form id="attributeForm"></form>
+      <button id="saveAttrBtn">Save</button>
+      <button id="cancelAttrBtn">Cancel</button>
+    </div>
+
+    <div id="druzhba-attributeModal" style="display: none">
+      <div class="modal-header">
+        <h5>Атрибутивна таблица: Граници Дружба 1</h5>
+        <div>
+          <button
+            id="druzhba-toggleEditBtn"
+            title="Редактирай атрибутивна информация."
+          >
+            ✏️
+          </button>
+          <button
+            id="druzhba-saveChangesBtn"
+            disabled
+            title="Запази промените."
+          >
+            💾
+          </button>
+          <button
+            id="druzhba-undoChangesBtn"
+            disabled
+            title="Отмени всички незапазени промени."
+          >
+            ↩️
+          </button>
+          <button
+            id="druzhba-deleteFeatureBtn"
+            disabled
+            title="Изтрий избрания обект."
+          >
+            🗑️
+          </button>
+          <button
+            id="druzhba-downloadGeoJSONBtn"
+            disabled
+            title="Изтегли редактирания GeoJSON файл."
+          >
+            ⬇️
+          </button>
+          <button
+            id="druzhba-clearSelectionBtn"
+            disabled
+            title="Изчисти селекцията."
+          >
+            Изчисти селекция
+          </button>
+          <button
+            onclick="document.getElementById('druzhba-attributeModal').style.display='none'"
+            title="Затвори атрибутивната таблица."
+          >
+            ❌
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-table-wrapper">
+        <table id="druzhba-attributeTable">
+          <thead>
+            <tr id="druzhba-attributeHeader"></tr>
+            <tr id="druzhba-attributeFilters"></tr>
+          </thead>
+          <tbody></tbody>
+          <div id="druzhba-selectedFeatureWarning" class="feature-warning">
+            В момента има избран обект.
+          </div>
+        </table>
+      </div>
+    </div>
+
+    <div id="points-attributeModal" style="display: none">
+      <div class="modal-header">
+        <h5>Атрибутивна таблица: Точки на интерес</h5>
+        <div>
+          <button
+            id="points-toggleEditBtn"
+            title="Редактирай атрибутивна информация."
+          >
+            ✏️
+          </button>
+          <button id="points-saveChangesBtn" disabled title="Запази промените.">
+            💾
+          </button>
+          <button
+            id="points-undoChangesBtn"
+            disabled
+            title="Отмени всички незапазени промени."
+          >
+            ↩️
+          </button>
+          <button
+            id="points-deleteFeatureBtn"
+            disabled
+            title="Изтрий избрания обект."
+          >
+            🗑️
+          </button>
+          <button
+            id="points-downloadGeoJSONBtn"
+            disabled
+            title="Изтегли редактирания GeoJSON файл."
+          >
+            ⬇️
+          </button>
+          <button
+            id="points-clearSelectionBtn"
+            disabled
+            title="Изчисти селекцията."
+          >
+            Изчисти селекция
+          </button>
+          <button
+            onclick="document.getElementById('points-attributeModal').style.display='none'"
+            title="Затвори атрибутивната таблица."
+          >
+            ❌
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-table-wrapper">
+        <table id="points-attributeTable">
+          <thead>
+            <tr id="points-attributeHeader"></tr>
+            <tr id="points-attributeFilters"></tr>
+          </thead>
+          <tbody></tbody>
+          <div id="points-selectedFeatureWarning" class="feature-warning">
+            В момента има избран обект.
+          </div>
+        </table>
+      </div>
+    </div>
+
+    <div id="route-attributeModal" style="display: none">
+      <div class="modal-header">
+        <h5>Атрибутивна таблица: Изчислен маршрут</h5>
+        <div>
+          <button
+            id="route-toggleEditBtn"
+            title="Редактирай атрибутивна информация."
+          >
+            ✏️
+          </button>
+          <button id="route-saveChangesBtn" disabled title="Запази промените.">
+            💾
+          </button>
+          <button
+            id="route-undoChangesBtn"
+            disabled
+            title="Отмени всички незапазени промени."
+          >
+            ↩️
+          </button>
+          <button
+            id="route-deleteFeatureBtn"
+            disabled
+            title="Изтрий избрания обект."
+          >
+            🗑️
+          </button>
+          <button
+            id="route-downloadGeoJSONBtn"
+            disabled
+            title="Изтегли редактирания GeoJSON файл."
+          >
+            ⬇️
+          </button>
+          <button
+            id="route-clearSelectionBtn"
+            disabled
+            title="Изчисти селекцията."
+          >
+            Изчисти селекция
+          </button>
+          <button
+            onclick="document.getElementById('route-attributeModal').style.display='none'"
+            title="Затвори атрибутивната таблица."
+          >
+            ❌
+          </button>
+        </div>
+      </div>
+
+      <div class="modal-table-wrapper">
+        <table id="route-attributeTable">
+          <thead>
+            <tr id="route-attributeHeader"></tr>
+            <tr id="route-attributeFilters"></tr>
+          </thead>
+          <tbody></tbody>
+          <div id="route-selectedFeatureWarning" class="feature-warning">
+            В момента има избран обект.
+          </div>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

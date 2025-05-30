@@ -1,0 +1,28 @@
+#!/bin/sh
+
+echo "Running Prettier before commit..."
+
+# Format only staged files
+STAGED_FILES=$(git diff --cached --name-only --diff-filter=ACM | grep -E '\.(js|ts|jsx|tsx|json|css|html)$')
+
+if [ -z "$STAGED_FILES" ]; then
+  echo "No files to format."
+  exit 0
+fi
+
+# Run Prettier on staged files
+# npx prettier --write $STAGED_FILES
+npm run format --write $STAGED_FILES
+
+# Check if any of those files are now different (i.e., modified)
+MODIFIED=$(git diff --name-only $STAGED_FILES)
+
+if [ -n "$MODIFIED" ]; then
+  echo "❌ Commit aborted: Prettier modified some files."
+  echo "🔁 Please review changes, stage them manually, and commit again."
+  echo "$MODIFIED"
+  exit 1
+fi
+
+echo "✅ Prettier formatting passed. Proceeding with commit."
+exit 0
